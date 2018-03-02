@@ -16,7 +16,22 @@ import test from './test'
 
 Vue.use(Router)
 
-c
+let routesArr = [
+    {
+        path: routePrefix,
+        name: 'main',
+        redirect:"/home",
+        meta: {
+            title: '小龙测试'
+        }
+    }
+];
+
+routesArr = routesArr.concat(
+    home,
+    test
+);
+
 export default new Router({
     mode: 'history',
     routes: routesArr
